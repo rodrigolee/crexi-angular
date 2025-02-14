@@ -5,6 +5,6 @@ export const appRoutes: Routes = [
     {
         path: 'users',
         loadChildren: () =>
-          import('./user/user.routes').then(r => r.USER_ROUTES)
-      },
+            import('./user/user.routes').then((r) => r.USER_ROUTES)
+    },
 ];

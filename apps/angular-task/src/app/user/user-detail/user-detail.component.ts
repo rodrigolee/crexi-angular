@@ -13,28 +13,40 @@ import { Router } from '@angular/router';
     standalone: true
 })
 export class UserDetailComponent implements OnInit {
-    userService = inject(UserService)
+
+    userService = inject(UserService);
     router = inject(Router); // Inject the Router service
 
     user = this.userService.selectedUser;
 
-    @Input({transform: numberAttribute})
+    @Input({ transform: numberAttribute })
     id = 0;
 
-    ngOnInit(): void {
-        if(this.id) {
-            this.userService.setSelectedUserId(this.id)
+    ngOnInit (): void {
+
+        if (this.id) {
+
+            this.userService.setSelectedUserId(this.id);
+
         }
+
     }
 
-    goBack(): void {
+    goBack (): void {
+
         this.router.navigate(['/users']);
+
     }
 
-    toggleFavorite(): void {
-        if (this.user()) {
-            console.log(this.user())
-            this.userService.toggleFavorite(this.user()!.id);
+    toggleFavorite (): void {
+
+        const user = this.user();
+        if (user) {
+
+            this.userService.toggleFavorite(user.id);
+
         }
+
     }
+
 }

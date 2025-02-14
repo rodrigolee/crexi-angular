@@ -6,7 +6,9 @@
   </mat-form-field>
 </div>
 <div class="card-container">
-  <mat-card *ngFor="let user of filteredUsers()" appearance="outlined" class="card">
+  @for (user of filteredUsers(); track user.id) {
+  <mat-card
+    appearance="outlined" class="card">
     <mat-card-header>
       <mat-card-title>
         <a [routerLink]="[user.id]" class="user-link">{{ user.name }}</a>
@@ -33,4 +35,5 @@
         'Favorite' }}</button>
     </mat-card-actions>
   </mat-card>
+  }
 </div>

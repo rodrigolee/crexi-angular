@@ -4,21 +4,21 @@ export interface UserApiResponse {
     username: string,
     email: string,
     address: {
-      street: string,
-      suite: string,
-      city: string,
-      zipcode: string
+        street: string,
+        suite: string,
+        city: string,
+        zipcode: string
     },
     phone: string,
     website: string,
     company: {
-      name: string,
-      catchPhrase: string,
-      bs: string
+        name: string,
+        catchPhrase: string,
+        bs: string
     },
-  }
+}
 
-  export interface User {
+export interface User {
     id: number,
     name: string,
     username: string,
@@ -28,4 +28,4 @@ export interface UserApiResponse {
     website: string,
     company: string,
     isFavorite?: boolean
-  }
+}
