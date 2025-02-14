@@ -1,0 +1,43 @@
+.card-container {
+    padding: 20px;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-link {
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.user-link:hover {
+    color: #125a9c;
+}
+
+.info-link {
+    text-decoration: none;
+    color: #009688;
+    transition: color 0.3s;
+}
+
+.info-link:hover {
+    color: #00796b;
+}
+
+mat-card-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+mat-card-actions button {
+    min-width: 100px;
+    padding: 8px 16px;
+}
