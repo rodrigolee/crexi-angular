@@ -20,8 +20,8 @@
         </mat-card-content>
 
         <mat-card-actions align="end">
-            <button (click)="goBack()" color="primary" mat-stroked-button>Back</button>
-            <button color="accent" mat-flat-button (click)="toggleFavorite()">{{ user()?.isFavorite ? 'Unfavorite' : 'Favorite' }}</button>
+            <button (click)="goBack()" color="primary" mat-stroked-button data-testid="back-button">Back</button>
+            <button color="accent" mat-flat-button (click)="toggleFavorite()" data-testid="favorite-button">{{ user()?.isFavorite ? 'Unfavorite' : 'Favorite' }}</button>
         </mat-card-actions>
     </mat-card>
 </div>

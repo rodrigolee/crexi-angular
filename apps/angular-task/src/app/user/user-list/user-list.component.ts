@@ -1,5 +1,5 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { UserService } from '../user.service';
 // Angular Material
@@ -16,7 +16,6 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
     selector: 'crx-user-list',
     imports: [
         CommonModule,
-        NgFor,
         ReactiveFormsModule,
         RouterLink,
         MatCardModule,

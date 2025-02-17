@@ -1,14 +1,14 @@
 <div class="search-container">
   <mat-form-field appearance="outline">
     <mat-label>Search Users</mat-label>
-    <input [formControl]="searchQuery" matInput placeholder="Type to search..." />
+    <input [formControl]="searchQuery" matInput placeholder="Type to search..." data-testid="search-input" />
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
 </div>
 <div class="card-container">
   @for (user of filteredUsers(); track user.id) {
   <mat-card
-    appearance="outlined" class="card">
+    appearance="outlined" class="card" data-testid="user-card">
     <mat-card-header>
       <mat-card-title>
         <a [routerLink]="[user.id]" class="user-link">{{ user.name }}</a>
@@ -30,8 +30,8 @@
 
     <mat-card-actions align="end">
 
-      <button [routerLink]="[user.id]" color="primary" mat-stroked-button >View Details</button>
-      <button (click)="toggleFavorite(user.id)" color="accent" mat-flat-button>{{ user.isFavorite ? 'Unfavorite' :
+      <button [routerLink]="[user.id]" color="primary" mat-stroked-button data-testid="details-button">View Details</button>
+      <button (click)="toggleFavorite(user.id)" color="accent" mat-flat-button data-testid="favorite-button">{{ user.isFavorite ? 'Unfavorite' :
         'Favorite' }}</button>
     </mat-card-actions>
   </mat-card>
